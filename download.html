@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OTA Download</title>
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap" rel="stylesheet">
     <style>
         body {
             display: flex;
@@ -11,7 +12,7 @@
             align-items: center;
             height: 100vh;
             margin: 0;
-            font-family: Arial, sans-serif;
+            font-family: 'Open Sans', sans-serif;
             background-color: #f8f9fa;
         }
         .download-container {
@@ -20,25 +21,48 @@
             justify-content: center;
             align-items: center;
             text-align: center;
+            padding: 20px;
+            background-color: #ffffff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            max-width: 90%;
+        }
+        .icon-image {
+            width: 150px; /* Adjust the size as needed */
+            height: 150px; /* Adjust the size as needed */
+            border-radius: 15px; /* Make the corners rounded */
+            margin-bottom: 20px;
         }
         .download-button {
             display: inline-block;
             margin-top: 20px;
-            padding: 10px 20px;
-            font-size: 16px;
+            padding: 12px 24px; /* Adjusted padding */
+            font-size: 16px; /* Adjusted font size */
             color: #fff;
-            background-color: #007bff;
+            background-color: #1555c1;
             border: none;
             border-radius: 5px;
             text-decoration: none;
             cursor: pointer;
+            transition: background-color 0.3s;
         }
         .download-button:hover {
             background-color: #0056b3;
         }
-        .icon-image {
-            width: 100px; /* Adjust the size as needed */
-            height: 100px; /* Adjust the size as needed */
+        .changelog {
+            margin-top: 30px;
+            font-size: 14px; /* Adjusted font size */
+            color: #333;
+            text-align: left;
+            max-width: 300px;
+            line-height: 1.5; /* Line spacing */
+        }
+        .changelog-title {
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+        .changelog-version {
+            margin-bottom: 20px; /* Spacing between versions */
         }
     </style>
 </head>
@@ -48,6 +72,25 @@
         <a href="itms-services://?action=download-manifest&url=https://raw.githubusercontent.com/patrickleonardus/ota-downloader/main/manifest.plist" class="download-button">
             Download App
         </a>
+        <div class="changelog">
+            <div class="changelog-title">Changelog</div>
+            <div class="changelog-version">
+                <div class="changelog-title">v1.0.1:</div>
+                <ul>
+                    <li>Add Gebyar BCA, Oneklik enhancement, Flazz enhancement and RIPLAY to BCA mobile (equal to v4.3.1)</li>
+                    <li>Add Gebyar BCA, World Wide Banking to myBCA (equal to v.1.23.0)</li>
+                    <li>Bug Fix in myBCA (Fix local storage issue and login use case).</li>
+                </ul>
+            </div>
+            <div class="changelog-version">
+                <div class="changelog-title">v1.0.0:</div>
+                <ul>
+                    <li>Initial release Rumah Biru for BCA mobile & myBCA with core and user interface functionalities.</li>
+                    <li>Added Theme Selector in Rumah Biru</li>
+                    <li>Added Localization in Rumah Biru</li>
+                </ul>
+            </div>
+        </div>
     </div>
 </body>
 </html>
